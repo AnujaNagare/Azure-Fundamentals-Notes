@@ -1,0 +1,34 @@
+Delta Lake on Azure
+
+- stores data in Azure Data Lake Store
+- Delta lake satisfies requirements like:
+  - to have data stored in a format that is open sourced and provides properties such as transaction support, schema enforcement/governance and BI support
+  
+  
+  - Delta is an open-source storage layer on top of your data lake 
+  - it brings ACID transaction capabilities on big data workloads
+  
+  How does Delta integrate with other Azure Services?
+- Azure Databricks: 
+    -- Azure Databricks natively supports Delta Lake. 
+    -- you can use capabilities such as Delta caching.
+    -- you can use SQL, Python, R or Scala to query the delta lake.
+    
+- Azure Synapse Analytics: 
+    -- compatible with Linux Foundation Delta Lake 
+    -- can use Synapse Spark to read and write data in your data lake stored in Delta format. 
+    -- Azure Synapse has language support for Scala, PySpark, and .NET.
+
+- Azure Data Factory: 
+    -- supports Delta Lake in the following ways:
+      - Copy activity supports Azure Databricks Delta Lake connector to copy data from any supported source data store to a Azure Databricks Delta Lake table
+      and from Delta Lake table to any supported sink data store.
+      - ADF mapping data flows support generic Delta Lake format on Azure Storage as source and sink to read and write Delta files for code-free extract, 
+      transform and load (ETL), and runs on managed Azure Integration Runtime (IR).
+      - Azure Databricks Notebook Activities support orchestrating your code-centric ETL or machine learning workload on top of Delta Lake.
+
+- Azure HDInsight: 
+    -- supports both Apache Spark and Hive. 
+    -- can connect to a Delta Lake by downloading relevant open source drivers.
+
+- Power BI: With the new Azure Databricks Power BI connector you can query Delta Lake tables directly using Azure Databricks clusters.
